@@ -1,0 +1,1 @@
+kind create cluster --name springboot-microservices --config kind-config.yaml

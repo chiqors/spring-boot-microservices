@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-service
+  template:
+    metadata:
+      labels:
+        app: frontend-service
+    spec:
+      containers:
+        - name: frontend-service
+          image: chiqors/mic-frontend-service:latest
+          imagePullPolicy: Never # disable this in production
+          env:
+            - name: KEYCLOAK_URL # For authentication service
+              valueFrom:
+                configMapKeyRef:
+                  key: KEYCLOAK_URL
+                  name: common-config
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  selector:
+    app: frontend-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
