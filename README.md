@@ -36,3 +36,8 @@ The diagram illustrates the application architecture of this Spring Boot-based m
 - **OpenTelemetry, Prometheus, Grafana**: Tools used for monitoring and observability.
 - **Docker**: Used for building and packaging the microservices into containerized applications.
 - **Kubernetes**: The container orchestration platform used for deploying and managing the microservices.
+
+## Future Improvement Plan
+
+- Implement client discovery service and load balancing using Netflix Eureka.
+- Utilize Helm Charts and Kustomize for deploying multiple Kubernetes environments.
