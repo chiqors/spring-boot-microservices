@@ -14,6 +14,7 @@ This project is a practice implementation of a simple ordering and product manag
 - **Authentication and Authorization**: The application uses Keycloak to manage authentication and authorization, providing secure access control across services. Keycloak handles user logins, role-based access, and integrates with existing identity providers.
 - **Monitoring and Observability**: The application integrates with various monitoring tools, such as OpenTelemetry, Prometheus, and Grafana, to provide visibility into the health and performance of the microservices.
 - **Docker and Kubernetes Configuration**: This project includes the basic configuration files for building Docker images and deploying the application to a Kubernetes cluster.
+- **Testing with Testcontainers**: By utilizing the Testcontainers dependency, the application can perform isolated testing of services with their required dependencies. This approach ensures that tests are reliable and can simulate real-world scenarios effectively.
 
 ## Application Architecture
 
@@ -44,3 +45,4 @@ The diagram illustrates the application architecture of this Spring Boot-based m
 - Implement client discovery service and load balancing using Netflix Eureka.
 - Utilize Helm Charts and Kustomize for deploying multiple Kubernetes environments.
 - Implement a config server for managing the microservices environment.
+- Implement a BOM (Bill of Materials) for global dependency version management to ensure consistency across microservices.
