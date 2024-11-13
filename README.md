@@ -43,3 +43,4 @@ The diagram illustrates the application architecture of this Spring Boot-based m
 
 - Implement client discovery service and load balancing using Netflix Eureka.
 - Utilize Helm Charts and Kustomize for deploying multiple Kubernetes environments.
+- Implement a config server for managing the microservices environment.
