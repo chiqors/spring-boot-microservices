@@ -7,13 +7,13 @@ This project is a practice implementation of a simple ordering and product manag
 ## Key Features
 
 - **Ordering Product Services**: The application allows users to browse and order products, with the Order Service managing the order processing and fulfillment workflows.
-- **Notification Service**: The Notification Service is responsible for delivering updates and alerts to users, such as order status changes or low inventory notifications.
+- **Notification Service**: The Notification Service is responsible for delivering updates and alerts to users, such as order status changes or low inventory notifications. It supports sending emails and can be configured with SMTP settings for testing with Mailtrap or a production SMTP setup.
 - **Asynchronous Communication**: The services communicate asynchronously using Kafka, which helps to decouple the services and improve the overall system resilience.
 - **Fault Tolerance**: The Resilience4J library is used to implement circuit breakers and other fault tolerance patterns, ensuring that the system can gracefully handle failures and maintain availability.
 - **API Documentation**: The project uses Springdoc OpenAPI to generate comprehensive API documentation. This allows developers to easily understand and interact with the application's RESTful services through an automatically generated OpenAPI specification, which can be accessed via a user-friendly interface.
 - **Authentication and Authorization**: The application uses Keycloak to manage authentication and authorization, providing secure access control across services. Keycloak handles user logins, role-based access, and integrates with existing identity providers.
 - **Monitoring and Observability**: The application integrates with various monitoring tools, such as OpenTelemetry, Prometheus, and Grafana, to provide visibility into the health and performance of the microservices.
-- **Docker and Kubernetes Configuration**: This project includes the basic configuration files for building Docker images and deploying the application to a Kubernetes cluster.
+- **Docker and Kubernetes Configuration**: This project includes the basic configuration files for building Docker images and deploying the application to a Kubernetes cluster. Additionally, a build-images.sh script is provided to streamline the process of building and pushing Docker images using a bash script for easier management.
 - **Testing with Testcontainers**: By utilizing the Testcontainers dependency, the application can perform isolated testing of services with their required dependencies. This approach ensures that tests are reliable and can simulate real-world scenarios effectively.
 
 ## Application Architecture
